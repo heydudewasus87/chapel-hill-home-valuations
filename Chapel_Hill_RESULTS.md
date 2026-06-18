@@ -4,10 +4,8 @@ What the model found when run on **29 live Chapel Hill listings** from the RentC
 (Jan 2025), valuing each home from real-estate finance first principles and comparing the
 result to its asking price.
 
-**The headline finding:** by fundamentals — what homes earn in rent and what local incomes
-can finance — Chapel Hill homes broadly trade **above** fair value. This isn't a quirk of the
-model; it matches the documented state of the market (see "Does the wider market agree?"
-below). The map's real value is showing *relative* stretch: which homes are most over-priced
+**The finding:** by fundamentals — what homes earn in rent and what local incomes
+can finance — Chapel Hill homes broadly trade **above** fair value. This matches the documented state of the market. The map's real value is showing *relative* stretch: which homes are most over-priced
 versus the few that look reasonable even on demanding fundamentals.
 
 ---
@@ -15,11 +13,9 @@ versus the few that look reasonable even on demanding fundamentals.
 ## The map
 
 Green = underpriced, amber = fairly valued, red = overpriced. Bigger, more opaque markers are
-higher-conviction calls (more independent methods agree). The map is mostly red — that's the
-finding, not a bug.
+higher-conviction calls (more independent methods agree). 
 
-<!-- SCREENSHOT: folium map -->
-![Chapel Hill valuation map](map.png)
+<img width="493" height="419" alt="image" src="https://github.com/user-attachments/assets/467ce1a6-e301-4314-9b3e-2b1e5abd65bc" />
 
 ---
 
@@ -35,18 +31,17 @@ Median valuation gap: **+28.7%** — across the sample, asking prices sit ~29% a
 blended fair value supports. **97% of homes keep their label** across nine cap-rate ×
 mortgage-rate scenarios, so the call is robust to interest-rate assumptions.
 
-<!-- SCREENSHOT: histogram + asking-vs-fair scatter -->
-![Valuation gap distribution and asking vs fair scatter](charts.png)
+<img width="692" height="243" alt="image" src="https://github.com/user-attachments/assets/b89ffda6-5d5e-4b10-893c-9e89b7ec76e0" />
+
 
 ---
 
 ## Why the model reads "expensive" — three independent angles agree
 
-This is the important part. The over-valuation call isn't one method's opinion; three
-methods that never look at asking prices all point the same way:
+The over-valuation call isn't one method's opinion; three methods that never look at asking prices all point the same way:
 
 - **Income approach:** gross rental yields are about **2%** across the sample. A home earning
-  2% in rent is priced at roughly 50× its annual rent — far above what a cash-flow investor
+  2% in rent is priced at roughly 50× its annual rent which is far above what a cash-flow investor
   would pay (the model assumes a 5.75% cap rate). On rent alone, almost everything looks rich.
 - **Affordability:** most homes sit well above what a median local household can finance at
   current mortgage rates.
@@ -54,10 +49,10 @@ methods that never look at asking prices all point the same way:
   asking for most homes.
 
 Only the comp method (which reflects what other sellers are asking) tracks the asking prices.
-When three of four independent methods agree a market is expensive, that's a real signal.
+When three of four independent methods agree a market is expensive, it is a signal the market is overpriced.
 
-<!-- SCREENSHOT: methods vs asking bar chart -->
-![Valuation methods vs asking price](methods.png)
+<img width="694" height="242" alt="image" src="https://github.com/user-attachments/assets/68b637b7-5f5a-4fa2-9c7b-e69c50767c9d" />
+
 
 ---
 
@@ -82,7 +77,7 @@ bathrooms) and should be ignored.
 ## The homes that look reasonable
 
 In a market this stretched, the interesting output is the handful of homes that hold up *even
-on demanding fundamentals*. The most credible (method agreement 2, not data artifacts):
+on demanding fundamentals*. The most credible:
 
 - **39 Monteith Dr** (single family, +0.8% gap) — essentially fairly valued; the cleanest
   "priced about right" home in the set.
@@ -93,8 +88,6 @@ These are the relative best values. Note the two homes the model labels "underpr
 low-conviction (agreement 1) call driven by a single method. The conviction score correctly
 marks them as weak.
 
-<!-- SCREENSHOT: ranked under/over tables -->
-![Top underpriced and overpriced homes](ranked.png)
 
 The highest-conviction over-priced calls (agreement 3) — 594 Cedar Lake (+88%) and 68 Willow
 Way (+70%) — are where rent, affordability, and cost all agree the price runs well ahead of
@@ -122,13 +115,12 @@ So "Chapel Hill trades above fundamentals" is the consensus read, not just this 
 
 ---
 
-## Limitations (read this)
+## Limitations
 
 - **"Above fundamentals" is not a crash prediction.** A high price-to-rent in a desirable,
-  land-constrained college town is normal and can persist for years; buyers are paying for
+  land-constrained college town is normal and can persist for years as buyers are paying for
   appreciation and amenities, not cash flow. The model measures value versus *fundamentals*,
-  not where prices will go. (Some 2025–26 reports actually show the market cooling toward
-  more balanced conditions.)
+  not where prices will go. 
 - **No ground truth.** There's no realized outcome to score fair value against. This is a
   transparent framework, not a claim to know each home's true price.
 - **Fundamentals-based valuation structurally reads desirable markets as overvalued.** That's
@@ -144,23 +136,6 @@ So "Chapel Hill trades above fundamentals" is the consensus read, not just this 
 
 ---
 
-## Roadmap
-
-- Quarantine mislabeled listings (a "land" record with bedrooms is bad data).
-- Pull more live listings to firm up the condo and townhouse samples.
-- Add closed-sale comps if a sales-history source becomes available.
-- Let the user dial the land-cap ratio and weights from one control cell to explore
-  fundamentals-heavy vs. market-heavy views.
-
----
-
-## Bottom line
-
-On real listings, the model finds Chapel Hill homes broadly priced above what rent and local
-incomes justify — a conclusion three independent methods agree on and that matches the
-documented market. The most useful output is the *relative* ranking: high-conviction
-over-priced homes where fundamentals and price diverge hardest, and the few homes (39
-Monteith, 126 Black Bear) that look reasonable even on a demanding fundamentals lens.
 
 *This is a research and educational project, not investment advice, an appraisal, or a
 recommendation to buy or sell any property.*
